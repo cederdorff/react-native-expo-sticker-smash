@@ -25,6 +25,7 @@ export default function App() {
 
     return (
         <View style={styles.container}>
+            <StatusBar style="light" />
             <View style={styles.imageContainer}>
                 <ImageViewer
                     placeholderImageSource={PlaceholderImage}
@@ -35,7 +36,6 @@ export default function App() {
                 <Button theme="primary" label="Choose a photo" onPress={pickImageAsync} />
                 <Button label="Use this photo" />
             </View>
-            <StatusBar style="auto" />
         </View>
     );
 }
