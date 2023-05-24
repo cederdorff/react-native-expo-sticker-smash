@@ -6,6 +6,7 @@ export default function ImageViewer({ placeholderImageSource, selectedImage }) {
     if (selectedImage) {
         image = selectedImage;
     }
+    console.log(image);
 
     return <Image source={image} style={styles.image} />;
 }
