@@ -7,7 +7,7 @@ import Button from "./components/Button";
 import ImageViewer from "./components/ImageViewer";
 import IconButton from "./components/IconButton";
 import CircleButton from "./components/CircleButton";
-import EmojiPicker from "./components/EmojiPicjer";
+import EmojiPicker from "./components/EmojiPicker";
 import EmojiList from "./components/EmojiList";
 import EmojiSticker from "./components/EmojiSticker";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -56,13 +56,8 @@ export default function App() {
             <StatusBar style="light" />
 
             <View style={styles.imageContainer}>
-                <ImageViewer
-                    placeholderImageSource={PlaceholderImage}
-                    selectedImage={selectedImage}
-                />
-                {pickedEmoji !== null ? (
-                    <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
-                ) : null}
+                <ImageViewer placeholderImageSource={PlaceholderImage} selectedImage={selectedImage} />
+                {pickedEmoji !== null ? <EmojiSticker imageSize={40} stickerSource={pickedEmoji} /> : null}
             </View>
 
             {showAppOptions ? (
